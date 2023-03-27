@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Classification Result</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body,html{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: arial;
+            background-color: midnightblue;
+
+
+        }
+        .banner-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            right:50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            width: 45%;
+            padding: 40px 0;
+            text-align: center;
+            border-top-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-weight: bold;
+            border: 10px;
+
+
+
+        }
+    </style>
+</head>
+<body>
+<div class="banner-text">
+
+     <h1>Classification Result:</h1>
+    <p>This image most likely belongs to {{ result }} with a percent confidence of {{ percentage }}.</p>
+
+    </div>
+
+</body>
+</html>
