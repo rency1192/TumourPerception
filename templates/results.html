@@ -20,6 +20,15 @@
 
 
         }
+         .banner-img{
+            background-image: url('/static/Image/1.jpg');
+            -webkit-background-size: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 100%;
+            filter: blur(5px);
+        }
         .banner-text{
             position: absolute;
             top: 50%;
@@ -43,10 +52,11 @@
     </style>
 </head>
 <body>
+ <div class="banner-img"></div>
 <div class="banner-text">
 
-     <h1>Classification Result:</h1>
-    <p>This image most likely belongs to {{ result }} with a percent confidence of {{ percentage }}.</p>
+     <h1>Classification Class</h1>
+      <p>This image most likely belongs to {{ result }} .</p>
 
     </div>
 

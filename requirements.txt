@@ -3,4 +3,5 @@ numpy
 tensorflow
 Pillow
 keras
+sklearn
 

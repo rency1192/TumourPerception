@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         *{
             box-sizing: border-box;
+
         }
+
         body,html{
             height: 100%;
             margin: 0;
             padding: 0;
             font-family: arial;
-            background-color: midnightblue;
+
 
 
         }
@@ -25,7 +29,7 @@
             margin: 0;
         }
         .banner-img{
-            background-image: url('1.jpg');
+            background-image: url('/static/Image/1.jpg');
             -webkit-background-size: cover;
             background-repeat: no-repeat;
             background-size: cover;
@@ -74,7 +78,29 @@
 
         input[type="file"] {
             margin-top: 10px;
+            display: none;
+            justify-content: center;
+
         }
+        label{
+            display: block;
+           position: center;
+            background-color: white;
+            color: midnightblue;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 300px;
+            padding: 18px 0;
+            height: border-box;
+            justify-content: center;
+            margin-left: 150px;
+
+
+
+        }
+
 
         input[type="submit"] {
             margin-top: 10px;
@@ -88,6 +114,7 @@
             font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
+            justify-content: center;
         }
     </style>
 </head>
@@ -95,10 +122,14 @@
     <div class="banner-img"></div>
 
     <div class="banner-text">
-        <h2>Breast Cancer Detection</h2>
+        <h2>Tumor Perception in Breast </h2>
         <div class="forms">
             <form action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="file">
+            <input type="file" name="upload-button" id="upload-button" accept="image/*">
+            <label for="upload-button" >
+                <i class="fa-solid fa-upload"></i>&nbsp;
+                Choose Image
+            </label>
             <br><br>
             <input type="submit" value="upload">
         </form>

@@ -21,7 +21,7 @@ def index():
 # predict and display it on result.html page
 @app.route('/upload', methods=['POST'])
 def upload():
-    image = request.files['file']
+    image = request.files['upload-button']
     image = Image.open(image)
     image = image.resize((180, 180))
     img_array = tf.keras.utils.img_to_array(image)
@@ -34,4 +34,4 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=8080)
